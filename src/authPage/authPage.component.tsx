@@ -20,7 +20,7 @@ export function AuthPage() {
           onSubmit={model.handleSubmit(model.onSubmit)}
         >
           <div className={cn(styles.row, styles.logo)}>
-            <IconContext.Provider value={{ size: "2.5rem", color: "#556B2F" }}>
+            <IconContext.Provider value={{ size: "2.5rem", color: "#000" }}>
               <IoLogoOctocat />
             </IconContext.Provider>
           </div>
