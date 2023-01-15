@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import { IoLogoOctocat } from "react-icons/io";
+import { IoEarth } from "react-icons/io5";
 import { IconContext } from "react-icons";
 import { useModel } from "./authPage.model";
 import { Footer } from "./footer";
@@ -20,8 +20,8 @@ export function AuthPage() {
           onSubmit={model.handleSubmit(model.onSubmit)}
         >
           <div className={cn(styles.row, styles.logo)}>
-            <IconContext.Provider value={{ size: "2.5rem", color: "#000" }}>
-              <IoLogoOctocat />
+            <IconContext.Provider value={{ size: "2.5rem", color: "#556B2F" }}>
+              <IoEarth />
             </IconContext.Provider>
           </div>
           <InputEmail
