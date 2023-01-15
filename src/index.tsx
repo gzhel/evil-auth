@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { default as App } from "./auth";
 import reportWebVitals from "./reportWebVitals";
-import "./reset.css";
+import { AuthPage } from "./authPage";
+import "./styles/reset.css";
+import "./styles/theme.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-root.render(<App />);
+root.render(<AuthPage />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap');
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+}
+
+.pageLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+.formLayout {
+  width: 400px;
+  min-height: 550px;
+  border: 1px solid var(--tertiary-color-hovered);
+  border-radius: 10px;
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    border: unset;
+    min-height: unset;
+  }
+}
+
+.row {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+
+  & svg:hover {
+    transition: 1.2s ease-in-out;
+    transform: rotate(360deg);
+  }
+}
+
+.forgotPassword {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--link-color);
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--link-color-hovered);
+    cursor: pointer;
+  }
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  background-color: var(--martian-color);
+  border: 0;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--martian-color-hovered);
+    cursor: pointer;
+  }
+}

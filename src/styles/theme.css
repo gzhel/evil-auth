@@ -1,0 +1,18 @@
+:root {
+    --font-family: 'Martian Mono', monospace;
+
+    --martian-color: rgba(85, 107, 47, 1);
+    --martian-color-hovered: rgba(85, 107, 47, 0.8);
+
+    --link-color: rgba(16, 114, 235, 1);
+    --link-color-hovered: rgba(16, 114, 235, 0.5);
+
+    --primary-color: rgba(0, 0, 0, 1);
+    --primary-color-hovered: rgba(0, 0, 0, 0.5);
+    --secondary-color: rgba(255, 255, 255, 1);
+    --secondary-color-hovered: rgba(255, 255, 255, 0.5);
+    --tertiary-color: rgba(128, 128, 128, 1);
+    --tertiary-color-hovered: rgba(128, 128, 128, 0.1);
+
+    --errors-color: rgba(232, 124, 3, 1);
+}
