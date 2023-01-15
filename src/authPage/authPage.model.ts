@@ -5,6 +5,7 @@ export const useModel = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<AuthPageFormData>();
 
@@ -12,5 +13,5 @@ export const useModel = () => {
     alert(formData.email + formData.password);
   };
 
-  return { register, handleSubmit, errors, onSubmit };
+  return { register, handleSubmit, watch, errors, onSubmit };
 };

@@ -5,7 +5,7 @@ interface ValidationItem {
   };
 }
 
-export interface FormInputProps {
+export interface InputEmailProps {
   className?: string;
   name: string;
   register: any;

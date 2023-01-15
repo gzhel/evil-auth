@@ -39,6 +39,12 @@
     font-size: 0.6rem;
     top: -15px;
     pointer-events: none;
+
+    &::after {
+      position: relative;
+      top: -3px;
+      content: "*";
+    }
   }
 }
 
@@ -52,18 +58,4 @@
   padding-left: 10px;
   color: var(--errors-color);
   font-size: 0.8rem;
-}
-
-.inputPassword {
-  padding-right: 60px;
-}
-
-.inputPasswordIcon {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-
-  &:hover {
-    cursor: pointer;
-  }
 }

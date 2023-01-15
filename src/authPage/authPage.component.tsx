@@ -2,20 +2,16 @@ import React from "react";
 import cn from "classnames";
 import { GiAlienStare } from "react-icons/gi";
 import { IconContext } from "react-icons";
-import { FormInput } from "./formInput";
 import { useModel } from "./authPage.model";
-import styles from "./authPage.module.scss";
 import { Footer } from "./footer";
+import { InputEmail } from "./inputEmail";
+import { InputPassword } from "./inputPassword";
+import styles from "./authPage.module.scss";
 
 export function AuthPage() {
   const model = useModel();
 
   //TODO:
-  // + 1) Text in the left top corner
-  // + 2) Mobile first markup
-  // + 2.5) Choose best fonts
-  // + 2.6) Add icon
-  // 3) Add Show button in password
   // 4) Mock api response
 
   return (
@@ -30,7 +26,7 @@ export function AuthPage() {
               <GiAlienStare />
             </IconContext.Provider>
           </div>
-          <FormInput
+          <InputEmail
             name="email"
             className={styles.row}
             register={model.register}
@@ -43,12 +39,13 @@ export function AuthPage() {
               },
             }}
           />
-          <FormInput
+          <InputPassword
             name="password"
             className={styles.row}
             register={model.register}
             errors={model.errors.password}
             required={true}
+            watch={model.watch}
             validation={{
               minLength: {
                 value: 6,

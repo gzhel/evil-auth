@@ -1,15 +1,13 @@
 import React from "react";
 import cn from "classnames";
-import { FormInputProps } from "./formInput.types";
-import { useModel } from "./formInput.model";
-import styles from "./formInput.module.scss";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import { InputPasswordProps } from "./inputPassword.types";
+import { useModel } from "./inputPassword.model";
+import styles from "./inputPassword.module.scss";
 
-export function FormInput(props: FormInputProps): JSX.Element {
+export function InputPassword(props: InputPasswordProps): JSX.Element {
   const model = useModel(props);
-
-  console.log(111, props);
 
   return (
     <>
@@ -17,8 +15,8 @@ export function FormInput(props: FormInputProps): JSX.Element {
         className={cn(
           props.className,
           styles.formInput,
-          props.errors && styles.formInputErrors,
-          model.isInputPassword && styles.inputPassword
+          styles.inputPassword,
+          props.errors && styles.formInputErrors
         )}
       >
         <input
@@ -29,7 +27,7 @@ export function FormInput(props: FormInputProps): JSX.Element {
           {...props.register(props.name, model.validation)}
         />
         <label htmlFor={props.name}>{model.fieldName}</label>
-        {!model.isInputPassword ? null : (
+        {!model.passwordValue ? null : (
           <span
             className={styles.inputPasswordIcon}
             onClick={model.handleShowPassword}

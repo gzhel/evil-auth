@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
-import { FormInputProps } from "./formInput.types";
+import { InputPasswordProps } from "./inputPassword.types";
 
-export const useModel = (props: FormInputProps) => {
+export const useModel = (props: InputPasswordProps) => {
   const fieldName = useMemo(() => {
     return props.name[0].toUpperCase() + props.name.slice(1);
   }, [props.name]);
@@ -19,9 +19,7 @@ export const useModel = (props: FormInputProps) => {
     );
   }, [fieldName, props.required, props.validation]);
 
-  const isInputPassword = useMemo(() => {
-    return props.name === "password";
-  }, [props.name]);
+  const passwordValue = props.watch("password", false);
 
   const [isPasswordShown, setPasswordShown] = useState(false);
 
@@ -30,19 +28,13 @@ export const useModel = (props: FormInputProps) => {
   }, []);
 
   const inputType = useMemo(() => {
-    if (isInputPassword && !isPasswordShown) {
-      return "password";
-    }
-    if (props.name === "email") {
-      return "email";
-    }
-    return "text";
-  }, [isInputPassword, isPasswordShown, props.name]);
+    return !isPasswordShown ? "password" : "text";
+  }, [isPasswordShown]);
 
   return {
     fieldName,
     validation,
-    isInputPassword,
+    passwordValue,
     isPasswordShown,
     handleShowPassword,
     inputType,
