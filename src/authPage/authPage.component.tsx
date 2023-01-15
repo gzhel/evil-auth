@@ -1,18 +1,16 @@
 import React from "react";
 import cn from "classnames";
-import { GiAlienStare } from "react-icons/gi";
+import { IoLogoOctocat } from "react-icons/io";
 import { IconContext } from "react-icons";
 import { useModel } from "./authPage.model";
 import { Footer } from "./footer";
 import { InputEmail } from "./inputEmail";
 import { InputPassword } from "./inputPassword";
+import { Preloader } from "./preloader";
 import styles from "./authPage.module.scss";
 
 export function AuthPage() {
   const model = useModel();
-
-  //TODO:
-  // 4) Mock api response
 
   return (
     <div className={styles.page}>
@@ -23,7 +21,7 @@ export function AuthPage() {
         >
           <div className={cn(styles.row, styles.logo)}>
             <IconContext.Provider value={{ size: "2.5rem", color: "#556B2F" }}>
-              <GiAlienStare />
+              <IoLogoOctocat />
             </IconContext.Provider>
           </div>
           <InputEmail
@@ -64,6 +62,7 @@ export function AuthPage() {
         </form>
       </section>
       <Footer />
+      <Preloader isLoading={model.isLoading} />
     </div>
   );
 }
