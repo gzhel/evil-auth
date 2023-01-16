@@ -1,8 +1,8 @@
 :root {
     --font-family: 'Martian Mono', monospace;
 
-    --martian-color: rgba(85, 107, 47, 1);
-    --martian-color-hovered: rgba(85, 107, 47, 0.8);
+    --martian-color: rgba(79, 138, 57, 1);
+    --martian-color-hovered: rgba(79, 138, 57, 0.8);
 
     --link-color: rgba(16, 114, 235, 1);
     --link-color-hovered: rgba(16, 114, 235, 0.5);

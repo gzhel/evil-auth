@@ -1,7 +1,8 @@
 import React, { FC, SyntheticEvent } from "react";
 import { createPortal } from "react-dom";
 import { IoEarth } from "react-icons/io5";
-import { GiAlienStare, GiExplodingPlanet } from "react-icons/gi";
+import { RiAliensFill } from "react-icons/ri";
+import { GiExplodingPlanet } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import styles from "./preloader.module.scss";
 import { useModel } from "./preloader.model";
@@ -30,7 +31,7 @@ export const Preloader: FC<PreloaderProps> = (props) => {
                   color: "#000",
                 }}
               >
-                <GiAlienStare />
+                <RiAliensFill />
               </IconContext.Provider>
               <IconContext.Provider
                 value={{
